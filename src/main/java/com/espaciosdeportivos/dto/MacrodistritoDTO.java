@@ -2,13 +2,13 @@ package com.espaciosdeportivos.dto;
 
 import lombok.*;
 import jakarta.validation.constraints.*;
-
+import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class MacrodistritoDTO {
+public class MacrodistritoDTO implements Serializable {
     private Long idMacrodistrito;
 
     @NotBlank(message = "El nombre del macrodistrito es obligatorio")

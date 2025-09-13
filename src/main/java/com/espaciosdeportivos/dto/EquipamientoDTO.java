@@ -2,11 +2,14 @@ package com.espaciosdeportivos.dto;
 import lombok.*;
 import jakarta.validation.constraints.*;
 
+import java.io.Serializable;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class EquipamientoDTO {
+
+public class EquipamientoDTO implements Serializable {
     private Long id_equipamiento;
 
     @NotBlank(message = "El nombre del equipamiento es obligatorio")

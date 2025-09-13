@@ -8,12 +8,14 @@ import lombok.*;
 import jakarta.validation.constraints.*;
 //import java.time.LocalTime;
 
+import java.io.Serializable;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 
-public class AreaDeportiva {
+public class AreaDeportivaDTO implements Serializable {
     private Long id_areadeportiva;
 
     @NotBlank(message = "El nombre del área es obligatorio")

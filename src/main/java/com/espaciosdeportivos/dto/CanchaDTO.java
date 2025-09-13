@@ -3,13 +3,13 @@ package com.espaciosdeportivos.dto;
 import lombok.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.*;
-
+import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class CanchaDTO {
+public class CanchaDTO  implements Serializable {
     private Long id_cancha;
 
     @NotBlank(message = "El nombre de la cancha es obligatorio")

@@ -2,12 +2,13 @@ package com.espaciosdeportivos.dto;
 
 import lombok.*;
 import jakarta.validation.constraints.*;
+import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ZonaDTO {
+public class ZonaDTO implements Serializable {
     private Long idZona;
 
     @NotBlank(message = "El nombre de la zona es obligatorio")
